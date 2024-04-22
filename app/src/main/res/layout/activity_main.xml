@@ -10,17 +10,21 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Select Your Year"
+        android:text="Time Table"
         android:textSize="24sp"
         android:textStyle="bold"
         android:layout_marginTop="16dp"
         android:layout_marginBottom="16dp"/>
 
-    <!-- Year Buttons -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_years"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"/>
+
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:elevation="4dp"
         app:cardCornerRadius="8dp">
 
@@ -30,79 +34,30 @@
             android:orientation="vertical"
             android:padding="16dp">
 
-            <Button
-                android:id="@+id/button_second_year"
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2nd Year"
-                android:backgroundTint="@color/colorAccent"
-                android:textColor="@android:color/white"
+                android:text="Faculty Details"
+                android:textSize="18sp"
+                android:textStyle="bold"
                 android:layout_marginBottom="8dp"/>
 
-            <Button
-                android:id="@+id/button_third_year"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_faculty"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="3rd Year"
-                android:backgroundTint="@color/colorAccent"
-                android:textColor="@android:color/white"
-                android:layout_marginBottom="8dp"/>
-
-            <Button
-                android:id="@+id/button_fourth_year"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="4th Year"
-                android:backgroundTint="@color/colorAccent"
-                android:textColor="@android:color/white"/>
+                android:layout_height="wrap_content"/>
 
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
 
-    <!-- Faculty and Extra Features Buttons -->
-    <androidx.cardview.widget.CardView
+    <Button
+        android:id="@+id/button_admin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:elevation="4dp"
-        app:cardCornerRadius="8dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="16dp">
-
-            <Button
-                android:id="@+id/button_faculty"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Faculty Timetable"
-                android:backgroundTint="@color/colorPrimary"
-                android:textColor="@android:color/white"
-                android:layout_marginBottom="8dp"/>
-
-            <Button
-                android:id="@+id/button_extra_features"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Extra Features"
-                android:backgroundTint="@color/colorPrimary"
-                android:textColor="@android:color/white"/>
-
-        </LinearLayout>
-
-    </androidx.cardview.widget.CardView>
-
-    <include
-        android:id="@+id/include_year_section"
-        layout="@layout/layout_year_section"
-        android:visibility="gone" />
-
-    <include
-        android:id="@+id/include_faculty_section"
-        layout="@layout/layout_faculty_section"
-        android:visibility="gone" />
+        android:text="Admin"
+        android:backgroundTint="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="16dp"/>
 
 </LinearLayout>
