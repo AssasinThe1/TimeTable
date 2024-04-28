@@ -23,20 +23,11 @@ public class ExtraFeaturesActivity extends AppCompatActivity {
             }
         });
 
-        Button emptyRoomButton = findViewById(R.id.button_empty_room);
-        emptyRoomButton.setOnClickListener(new View.OnClickListener() {
+        Button emptyRoomsButton = findViewById(R.id.button_empty_rooms);
+        emptyRoomsButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(ExtraFeaturesActivity.this, EmptyClassroomsActivity.class);
-                startActivity(intent);
-            }
-        });
-
-        Button roomTimetableButton = findViewById(R.id.button_room_timetable);
-        roomTimetableButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(ExtraFeaturesActivity.this, RoomTimetableActivity.class);
+                Intent intent = new Intent(ExtraFeaturesActivity.this, EmptyRoomsActivity.class);
                 startActivity(intent);
             }
         });
